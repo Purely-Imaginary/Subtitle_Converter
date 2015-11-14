@@ -1,0 +1,9 @@
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\bin\Debug\SubtitleConverter.exe.config
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.csprojResolveAssemblyReference.cache
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.Form1.resources
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.Properties.Resources.resources
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.csproj.GenerateResource.Cache
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\bin\Debug\SubtitleConverter.exe
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\bin\Debug\SubtitleConverter.pdb
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.exe
+D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.pdb
