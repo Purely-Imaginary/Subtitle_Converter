@@ -20,11 +20,25 @@ namespace SubtitleConverter
             InitializeComponent();
         }
 
+        public static string[,] Characters =
+        {
+            {"æ", "ć"},
+            {"ê", "ę"},
+            {"œ", "ś"},
+            {"¿", "ż"},
+            {"¹", "ą"},
+            {"ñ", "ń"},
+            {"³", "ł"},
+            {"Ÿ", "ź"},
+            {"Œ", "Ś"},
+            {"¯", "Ż"},
+            {"£", "Ł"},
+            {"Ê", "Ę"},
+            {"¥", "Ą"},
+        };
         private void button1_Click(object sender, EventArgs e)
         {
-            Stream myStream;
             
-           
             var ofd = new OpenFileDialog();
 
             if (ofd.ShowDialog() != DialogResult.OK) return;
@@ -33,6 +47,7 @@ namespace SubtitleConverter
             address = path;
             var bufor = "";
             bufor = File.ReadAllText(path);
+            dgv.Rows.Clear();
             dgv.Rows.Add(13);
             dgv.Rows[0].Cells[0].Value = "Linii"; //ILE LINII ||| LINIA -> LINII
             dgv.Rows[0].Cells[1].Value = bufor.Count(x => x == '\n');
@@ -79,29 +94,14 @@ namespace SubtitleConverter
 
             
             
-            var om = bufor.Count(x => x == '¹');
-            var ni = bufor.Count(x => x == 'ñ');
-            var uy = bufor.Count(x => x == '³');
-
-
-            // ê - ę | œ - ś | ¿ - ż | ¹ - ą | ñ - ń | ³ - ł
-            /*
-            a1.Text = nextLine.ToString();
-            a2.Text = ci.ToString();
-            a3.Text = em.ToString();
-            a4.Text = si.ToString();
-            a5.Text = rzy.ToString();
-            a6.Text = om.ToString();
-            a7.Text = ni.ToString();
-            a8.Text = uy.ToString();
-             */
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public static bool Convert(string filepath)
         {
-            if (address == "") return;
+            if (filepath == "") return false;
             var bufor = "";
-            bufor = File.ReadAllText(address);
+            bufor = File.ReadAllText(filepath);
             // ê - ę | œ - ś | ¿ - ż | ¹ - ą | ñ - ń | ³ - ł | ¯ - Ż | Œ - Ś | Ÿ - ź |  - Ź | £ - Ł
             bufor = bufor.Replace('æ', 'ć');
             bufor = bufor.Replace('ê', 'ę');
@@ -115,9 +115,31 @@ namespace SubtitleConverter
             bufor = bufor.Replace('¯', 'Ż');
             bufor = bufor.Replace('£', 'Ł');
 
-            var savePath = address;
+            var savePath = filepath;
 
-            File.WriteAllText(savePath,bufor);
+            File.WriteAllText(savePath, bufor);
+            return true;
+        }
+
+        public static int Analysis(string filepath)
+        {
+            var splitter = filepath.Split('.');
+            var extension = splitter[splitter.Length - 1];
+
+            var bufor = File.ReadAllText(filepath);
+            var lineCount = bufor.Count(x => x == '\n');
+            var charCount = 0;
+            foreach (var s in Characters)
+            {
+                charCount += bufor.Count(x => x == s[0]);
+            }
+
+            if (extension == "srt") charCount*=5;
+            return charCount*100 / lineCount;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
             label9.Text = "done";
         }
 
@@ -128,7 +150,8 @@ namespace SubtitleConverter
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label9.Text = "bgfhsdjbgdjk";
+            var mw = new MultiWindow();
+            mw.Show();
         }
     }
 }

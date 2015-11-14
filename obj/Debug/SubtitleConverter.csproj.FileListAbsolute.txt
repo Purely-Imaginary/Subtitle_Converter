@@ -7,3 +7,13 @@ D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\bin\Debug\SubtitleConverter.
 D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\bin\Debug\SubtitleConverter.pdb
 D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.exe
 D:\Dropbox\VS #\SubtitleConverter\SubtitleConverter\obj\Debug\SubtitleConverter.pdb
+D:\Dropbox\Dokumenty\Subtitle_Converter\bin\Debug\SubtitleConverter.exe.config
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.exe
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.pdb
+D:\Dropbox\Dokumenty\Subtitle_Converter\bin\Debug\SubtitleConverter.exe
+D:\Dropbox\Dokumenty\Subtitle_Converter\bin\Debug\SubtitleConverter.pdb
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.csprojResolveAssemblyReference.cache
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.Form1.resources
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.MultiWindow.resources
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.Properties.Resources.resources
+D:\Dropbox\Dokumenty\Subtitle_Converter\obj\Debug\SubtitleConverter.csproj.GenerateResource.Cache
